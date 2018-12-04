@@ -20,21 +20,6 @@ It runs every 1 hour and updates the **/etc/cisco-talos-tcpwrapper/cisco-talos-i
 
 ## Getting Started
 
-#### Run the first time with Docker as test (--rm flag for removal after exit)
-```
-docker run -it --rm \
--v /etc/hosts.deny:/go/src/cisco-talos-tcpwrapper/hosts.deny \
--v /etc/cisco-talos-tcpwrapper/:/go/src/cisco-talos-tcpwrapper/cisco-talos-tcpwrapper/ \
-robertcsapo/cisco-talos-tcpwrapper:latest
-```
-
-#### Running it as daemon (--restart flag makes it restart if stopped manually)
-```
-docker run -d \
--v /etc/hosts.deny:/go/src/cisco-talos-tcpwrapper/hosts.deny \
--v /etc/cisco-talos-tcpwrapper/:/go/src/cisco-talos-tcpwrapper/cisco-talos-tcpwrapper/ \
---restart=on-failure \
-robertcsapo/cisco-talos-tcpwrapper:latest
 ```
 
 #### Running it with Docker Compose
